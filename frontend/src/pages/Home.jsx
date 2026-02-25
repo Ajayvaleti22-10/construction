@@ -264,13 +264,13 @@ export default function Home() {
 
   return (
     <div data-testid="home-page" className="overflow-x-hidden">
-      {/* Hero Section – Build Dora / Architona inspired */}
+      {/* Hero Section – strong contrast so it stays visible when scrolling */}
       <section 
         ref={heroRef}
-        className="relative min-h-screen flex items-center bg-secondary" 
+        className="relative min-h-screen flex items-center bg-secondary shadow-2xl" 
         data-testid="hero-section"
       >
-        {/* Background Image + Dark overlay + warm gradient (Architona corner) */}
+        {/* Background Image + strong dark overlay so hero never washes out */}
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
@@ -278,8 +278,10 @@ export default function Home() {
             className="w-full h-full object-cover"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/92 to-secondary/75" />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/65 to-black/55" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-transparent" />
+          {/* Sharp bottom edge so hero reads as a clear block when scrolling */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
@@ -289,7 +291,7 @@ export default function Home() {
               {trustBadges.slice(0, 3).map((badge, i) => (
                 <span 
                   key={i}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 text-white/80 font-body text-xs font-light tracking-wide"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black/20 border border-white/20 text-white font-body text-xs font-light tracking-wide backdrop-blur-sm"
                 >
                   <CheckCircle className="w-3.5 h-3.5 text-primary" />
                   {badge}
@@ -297,18 +299,18 @@ export default function Home() {
               ))}
             </div>
             
-            {/* Headline – thin, wide, two-line (Architona style) */}
+            {/* Headline – thin, wide, two-line with shadow so it stays visible while scrolling */}
             <h1 
-              className={`font-hero text-5xl sm:text-6xl lg:text-8xl text-white uppercase tracking-[0.02em] leading-[0.95] mb-6 reveal-up ${heroRevealed ? 'revealed' : ''}`}
+              className={`font-hero text-5xl sm:text-6xl lg:text-8xl text-white uppercase tracking-[0.02em] leading-[0.95] mb-6 reveal-up drop-shadow-[0_2px_20px_rgba(0,0,0,0.4)] ${heroRevealed ? 'revealed' : ''}`}
               style={{ transitionDelay: '100ms' }}
             >
               Building<br />
-              <span className="text-primary">Excellence</span><br />
+              <span className="text-primary drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]">Excellence</span><br />
               Since 1999
             </h1>
             
             <p 
-              className={`text-base sm:text-lg text-white/70 max-w-xl mb-10 leading-relaxed font-body font-light reveal-up ${heroRevealed ? 'revealed' : ''}`}
+              className={`text-base sm:text-lg text-white/90 max-w-xl mb-10 leading-relaxed font-body font-light drop-shadow-[0_1px_8px_rgba(0,0,0,0.3)] reveal-up ${heroRevealed ? 'revealed' : ''}`}
               style={{ transitionDelay: '200ms' }}
             >
               We build more than just buildings—we build trust. With expert craftsmanship and a focus on quality, we deliver projects on time, every time.
@@ -327,13 +329,13 @@ export default function Home() {
                 <span className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-primary bg-primary/20 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                   <ArrowRight className="w-5 h-5" />
                 </span>
-                <span className="font-body text-lg font-medium text-primary border-b-2 border-primary pb-0.5 group-hover:text-white group-hover:border-white transition-colors duration-300">
+                <span className="font-body text-lg font-medium text-white border-b-2 border-white/70 pb-0.5 group-hover:text-primary group-hover:border-primary transition-colors duration-300 drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)]">
                   Get Consultation
                 </span>
               </Link>
               <Link 
                 to="/projects"
-                className="font-body text-sm font-light text-white/80 hover:text-white transition-colors underline underline-offset-4"
+                className="font-body text-sm font-light text-white/90 hover:text-white transition-colors underline underline-offset-4 drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)]"
                 data-testid="hero-view-projects-btn"
               >
                 View Our Work
@@ -360,11 +362,11 @@ export default function Home() {
           </div>
         </div>
         
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-          <div className="flex flex-col items-center gap-2 text-white/40">
+        {/* Scroll Indicator – above the fade so it stays visible */}
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
+          <div className="flex flex-col items-center gap-2 text-white/70">
             <span className="font-mono text-xs uppercase tracking-widest">Scroll</span>
-            <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
+            <div className="w-px h-12 bg-gradient-to-b from-white/70 to-transparent" />
           </div>
         </div>
       </section>
