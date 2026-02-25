@@ -1,0 +1,35 @@
+[
+  {
+    "id": "test-1",
+    "name": "Sarah Mitchell",
+    "company": "Mitchell & Associates",
+    "role": "CEO",
+    "content": "BuildCraft transformed our outdated office into a modern workspace that our team loves. Their attention to detail and commitment to our timeline was exceptional. I highly recommend them for any commercial project.",
+    "rating": 5,
+    "image_url": "https://images.unsplash.com/photo-1675186914580-94356f7c012c?w=150&q=80",
+    "project_type": "commercial",
+    "approved": true
+  },
+  {
+    "id": "test-2",
+    "name": "James Rodriguez",
+    "company": null,
+    "role": "Homeowner",
+    "content": "Our dream home became a reality thanks to BuildCraft. From the initial design consultation to the final walkthrough, every step was handled with professionalism. The quality of craftsmanship exceeded our expectations.",
+    "rating": 5,
+    "image_url": "https://images.unsplash.com/photo-1607639106901-28314a0a622e?w=150&q=80",
+    "project_type": "residential",
+    "approved": true
+  },
+  {
+    "id": "test-3",
+    "name": "Emily Chen",
+    "company": "Chen Interiors",
+    "role": "Interior Designer",
+    "content": "As an interior designer, I've worked with many contractors. BuildCraft stands out for their ability to execute complex renovation projects while maintaining the highest standards. They're my go-to recommendation.",
+    "rating": 5,
+    "image_url": "https://images.unsplash.com/photo-1658909835269-e76abd3ffb5d?w=150&q=80",
+    "project_type": "renovation",
+    "approved": true
+  }
+]

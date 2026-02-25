@@ -1,0 +1,89 @@
+[
+  {
+    "id": "proj-1",
+    "title": "Skyline Tower",
+    "slug": "skyline-tower",
+    "category": "commercial",
+    "description": "A 40-story mixed-use development featuring premium office space and luxury retail. The tower's distinctive glass facade has become a landmark in the city's financial district.",
+    "client": "Metropolitan Development Corp",
+    "location": "Downtown Financial District",
+    "year": 2024,
+    "images": [
+      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
+      "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=800&q=80"
+    ],
+    "featured": true
+  },
+  {
+    "id": "proj-2",
+    "title": "The Morrison Estate",
+    "slug": "morrison-estate",
+    "category": "residential",
+    "description": "A stunning 8,000 sq ft custom home featuring modern architecture with natural materials. The estate includes a guest house, infinity pool, and landscaped gardens.",
+    "client": "Private Client",
+    "location": "Hillside Heights",
+    "year": 2024,
+    "images": [
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80"
+    ],
+    "featured": true
+  },
+  {
+    "id": "proj-3",
+    "title": "Heritage Loft Conversion",
+    "slug": "heritage-loft",
+    "category": "renovation",
+    "description": "A century-old warehouse transformed into luxury loft apartments while preserving original brick walls and timber beams. Modern amenities seamlessly integrated with historic charm.",
+    "client": "Urban Living Developers",
+    "location": "Arts District",
+    "year": 2023,
+    "images": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80"
+    ],
+    "featured": true
+  },
+  {
+    "id": "proj-4",
+    "title": "Central Distribution Hub",
+    "slug": "central-distribution",
+    "category": "industrial",
+    "description": "A 500,000 sq ft state-of-the-art distribution center with automated sorting systems and sustainable energy solutions.",
+    "client": "Global Logistics Inc",
+    "location": "Industrial Park West",
+    "year": 2023,
+    "images": [
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80"
+    ],
+    "featured": false
+  },
+  {
+    "id": "proj-5",
+    "title": "Riverside Medical Center",
+    "slug": "riverside-medical",
+    "category": "commercial",
+    "description": "A modern 6-story medical facility with specialized treatment centers, surgical suites, and patient care units designed for comfort and efficiency.",
+    "client": "Regional Healthcare Group",
+    "location": "Riverside District",
+    "year": 2024,
+    "images": [
+      "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&q=80"
+    ],
+    "featured": false
+  },
+  {
+    "id": "proj-6",
+    "title": "Oakwood Family Home",
+    "slug": "oakwood-family",
+    "category": "residential",
+    "description": "A warm and inviting 4,500 sq ft family home with open-plan living, chef's kitchen, and outdoor entertainment areas.",
+    "client": "Private Client",
+    "location": "Oakwood Estates",
+    "year": 2023,
+    "images": [
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80"
+    ],
+    "featured": false
+  }
+]

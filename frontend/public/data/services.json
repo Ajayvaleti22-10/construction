@@ -1,0 +1,42 @@
+[
+  {
+    "id": "svc-1",
+    "title": "Residential Construction",
+    "slug": "residential",
+    "description": "We build custom homes that reflect your vision and lifestyle. From modern minimalist designs to classic family estates, our residential construction services cover everything from foundation to finishing touches. Our team works closely with you to ensure every detail meets your expectations.",
+    "short_description": "Custom homes built to your exact specifications",
+    "icon": "Home",
+    "image_url": "https://images.unsplash.com/photo-1758957701419-2c6e266f7988?w=800&q=80&auto=format",
+    "features": ["Custom Design", "Energy Efficient", "Smart Home Ready", "Premium Materials"]
+  },
+  {
+    "id": "svc-2",
+    "title": "Commercial Construction",
+    "slug": "commercial",
+    "description": "From office complexes to retail spaces, we deliver commercial projects that combine functionality with striking design. Our experienced team manages every aspect of commercial construction, ensuring projects are completed on time and within budget.",
+    "short_description": "Office buildings, retail spaces, and more",
+    "icon": "Building2",
+    "image_url": "https://images.unsplash.com/photo-1766058481154-02ce7abd670b?w=800&q=80&auto=format",
+    "features": ["Scalable Solutions", "LEED Certified", "Modern Infrastructure", "Turnkey Delivery"]
+  },
+  {
+    "id": "svc-3",
+    "title": "Renovation & Remodeling",
+    "slug": "renovation",
+    "description": "Transform your existing space into something extraordinary. Whether it's a kitchen upgrade, bathroom remodel, or complete home renovation, we breathe new life into older structures while preserving their character.",
+    "short_description": "Breathe new life into existing spaces",
+    "icon": "Hammer",
+    "image_url": "https://images.unsplash.com/photo-1674951751720-c1f4f157381f?w=800&q=80&auto=format",
+    "features": ["Historic Preservation", "Modern Upgrades", "Space Optimization", "Budget Friendly"]
+  },
+  {
+    "id": "svc-4",
+    "title": "Industrial Construction",
+    "slug": "industrial",
+    "description": "We specialize in building robust industrial facilities including warehouses, manufacturing plants, and distribution centers. Our industrial projects prioritize durability, efficiency, and safety.",
+    "short_description": "Warehouses, factories, and industrial facilities",
+    "icon": "Factory",
+    "image_url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    "features": ["Heavy-Duty Construction", "Safety Compliant", "Efficient Layouts", "Scalable Design"]
+  }
+]

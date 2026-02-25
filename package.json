@@ -1,0 +1,14 @@
+{
+  "name": "construction-static",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static construction company site (Web3Forms + Cloudinary). Run from any OS.",
+  "scripts": {
+    "start": "npm run start --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "test": "npm run test --prefix frontend"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
