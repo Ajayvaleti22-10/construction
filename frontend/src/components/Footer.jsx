@@ -40,16 +40,16 @@ export const Footer = memo(function Footer() {
       className="bg-secondary text-white"
       data-testid="footer"
     >
-      {/* Certifications Bar */}
+      {/* Certifications Bar – refined */}
       <div className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-16">
             {certifications.map((cert, index) => {
               const Icon = cert.icon;
               return (
                 <div key={index} className="flex items-center gap-2 text-white/70">
                   <Icon className="w-5 h-5 text-primary" />
-                  <span className="font-mono text-xs uppercase tracking-wider">
+                  <span className="font-body text-xs font-light uppercase tracking-widest">
                     {cert.label}
                   </span>
                 </div>
@@ -65,17 +65,17 @@ export const Footer = memo(function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-flex items-center gap-3 mb-6 group">
-              <div className="w-11 h-11 bg-primary flex items-center justify-center">
-                <span className="font-heading text-lg font-bold text-white">
+              <div className="w-10 h-10 rounded-sm bg-primary flex items-center justify-center">
+                <span className="font-hero text-xl text-white tracking-tight">
                   BC
                 </span>
               </div>
               <div className="flex flex-col">
-                <span className="font-heading text-lg font-bold tracking-wide leading-none">
+                <span className="font-hero text-xl tracking-widest leading-none text-white">
                   BUILDCRAFT
                 </span>
-                <span className="font-mono text-2xs uppercase tracking-[0.15em] text-white/50">
-                  Construction Co.
+                <span className="font-mono text-2xs uppercase tracking-[0.2em] text-white/50">
+                  Construction
                 </span>
               </div>
             </Link>

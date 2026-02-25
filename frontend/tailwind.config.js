@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         heading: ['Oswald', 'system-ui', 'sans-serif'],
+        hero: ['Bebas Neue', 'Oswald', 'system-ui', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'ui-monospace', 'monospace']
       },

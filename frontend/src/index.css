@@ -6,43 +6,42 @@
 
 @layer base {
     :root {
-        /* Industrial Steel Theme - Premium Construction Aesthetic */
-        --background: 35 20% 97%;
-        --foreground: 0 0% 10%;
+        /* Refined construction theme – maroon & warm grey (Architona / Build Dora inspired) */
+        --background: 30 12% 97%;
+        --foreground: 350 25% 18%;
         --card: 0 0% 100%;
-        --card-foreground: 0 0% 10%;
+        --card-foreground: 350 25% 18%;
         --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 10%;
+        --popover-foreground: 350 25% 18%;
         
-        /* Warm Amber/Gold - Trust & Premium */
-        --primary: 40 60% 58%;
+        /* Deep maroon / burgundy – primary accent */
+        --primary: 350 45% 32%;
         --primary-foreground: 0 0% 100%;
         
-        /* Deep Charcoal - Strength & Authority */
-        --secondary: 0 0% 10%;
+        /* Charcoal – hero & footer */
+        --secondary: 0 0% 12%;
         --secondary-foreground: 0 0% 98%;
         
-        /* Steel Blue - Professional Accent */
-        --accent: 207 32% 35%;
-        --accent-foreground: 0 0% 100%;
+        /* Warm grey accent */
+        --accent: 350 20% 94%;
+        --accent-foreground: 350 45% 32%;
         
-        /* Concrete Grays */
+        /* Muted */
         --muted: 30 10% 93%;
-        --muted-foreground: 220 9% 40%;
+        --muted-foreground: 350 10% 42%;
         
         --destructive: 0 84% 60%;
         --destructive-foreground: 0 0% 98%;
-        --border: 30 10% 85%;
-        --input: 30 10% 85%;
-        --ring: 40 60% 58%;
+        --border: 30 10% 88%;
+        --input: 30 10% 88%;
+        --ring: 350 45% 32%;
         
-        /* Steel accent for special elements */
-        --steel: 207 32% 35%;
-        --steel-light: 207 25% 55%;
+        --steel: 350 30% 28%;
+        --steel-light: 350 25% 45%;
         --concrete: 30 5% 45%;
-        --warm-white: 35 20% 97%;
+        --warm-white: 30 15% 98%;
         
-        --radius: 0rem;
+        --radius: 0.25rem;
     }
 }
 
@@ -77,6 +76,9 @@
 @layer utilities {
     .font-heading {
         font-family: 'Oswald', system-ui, sans-serif;
+    }
+    .font-hero {
+        font-family: 'Bebas Neue', 'Oswald', system-ui, sans-serif;
     }
     .font-body {
         font-family: 'Inter', system-ui, sans-serif;

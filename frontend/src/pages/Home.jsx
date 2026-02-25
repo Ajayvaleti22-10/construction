@@ -264,13 +264,13 @@ export default function Home() {
 
   return (
     <div data-testid="home-page" className="overflow-x-hidden">
-      {/* Hero Section */}
+      {/* Hero Section – Build Dora / Architona inspired */}
       <section 
         ref={heroRef}
         className="relative min-h-screen flex items-center bg-secondary" 
         data-testid="hero-section"
       >
-        {/* Background Image with Overlay */}
+        {/* Background Image + Dark overlay + warm gradient (Architona corner) */}
         <div className="absolute inset-0">
           <img
             src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
@@ -278,29 +278,28 @@ export default function Home() {
             className="w-full h-full object-cover"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-secondary/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/92 to-secondary/75" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent opacity-60" />
         </div>
-        
-        {/* Blueprint Grid Overlay */}
-        <div className="absolute inset-0 blueprint-grid opacity-30" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
           <div className="max-w-3xl">
-            {/* Trust Badges */}
-            <div className={`flex flex-wrap gap-3 mb-6 reveal-up ${heroRevealed ? 'revealed' : ''}`}>
+            {/* Trust badges – minimal pills */}
+            <div className={`flex flex-wrap gap-3 mb-8 reveal-up ${heroRevealed ? 'revealed' : ''}`}>
               {trustBadges.slice(0, 3).map((badge, i) => (
                 <span 
                   key={i}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 backdrop-blur-sm text-white/80 font-mono text-xs uppercase tracking-wider"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/5 border border-white/10 text-white/80 font-body text-xs font-light tracking-wide"
                 >
-                  <CheckCircle className="w-3 h-3 text-primary" />
+                  <CheckCircle className="w-3.5 h-3.5 text-primary" />
                   {badge}
                 </span>
               ))}
             </div>
             
+            {/* Headline – thin, wide, two-line (Architona style) */}
             <h1 
-              className={`font-heading text-4xl sm:text-5xl lg:text-7xl font-bold text-white uppercase leading-[0.9] mb-6 reveal-up ${heroRevealed ? 'revealed' : ''}`}
+              className={`font-hero text-5xl sm:text-6xl lg:text-8xl text-white uppercase tracking-[0.02em] leading-[0.95] mb-6 reveal-up ${heroRevealed ? 'revealed' : ''}`}
               style={{ transitionDelay: '100ms' }}
             >
               Building<br />
@@ -309,52 +308,51 @@ export default function Home() {
             </h1>
             
             <p 
-              className={`text-lg sm:text-xl text-white/70 max-w-xl mb-8 leading-relaxed reveal-up ${heroRevealed ? 'revealed' : ''}`}
+              className={`text-base sm:text-lg text-white/70 max-w-xl mb-10 leading-relaxed font-body font-light reveal-up ${heroRevealed ? 'revealed' : ''}`}
               style={{ transitionDelay: '200ms' }}
             >
-              From custom homes to commercial developments, we deliver construction 
-              solutions with uncompromising quality and precision craftsmanship.
+              We build more than just buildings—we build trust. With expert craftsmanship and a focus on quality, we deliver projects on time, every time.
             </p>
             
+            {/* CTA – Get Consultation with circle-arrow (Build Dora style) */}
             <div 
-              className={`flex flex-col sm:flex-row gap-4 reveal-up ${heroRevealed ? 'revealed' : ''}`}
+              className={`flex flex-wrap items-center gap-6 reveal-up ${heroRevealed ? 'revealed' : ''}`}
               style={{ transitionDelay: '300ms' }}
             >
-              <Link to="/contact">
-                <Button 
-                  size="lg"
-                  className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-heading uppercase tracking-wider h-14 px-8"
-                  data-testid="hero-get-quote-btn"
-                >
-                  Get Free Quote
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center gap-3 group"
+                data-testid="hero-get-quote-btn"
+              >
+                <span className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-primary bg-primary/20 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+                <span className="font-body text-lg font-medium text-primary border-b-2 border-primary pb-0.5 group-hover:text-white group-hover:border-white transition-colors duration-300">
+                  Get Consultation
+                </span>
               </Link>
-              <Link to="/projects">
-                <Button 
-                  variant="outline"
-                  size="lg"
-                  className="w-full sm:w-auto bg-transparent border-2 border-white/30 text-white hover:bg-white hover:text-secondary font-heading uppercase tracking-wider h-14 px-8 transition-colors duration-300"
-                  data-testid="hero-view-projects-btn"
-                >
-                  View Our Work
-                </Button>
+              <Link 
+                to="/projects"
+                className="font-body text-sm font-light text-white/80 hover:text-white transition-colors underline underline-offset-4"
+                data-testid="hero-view-projects-btn"
+              >
+                View Our Work
               </Link>
             </div>
             
             {/* Quick Contact */}
             <div 
-              className={`mt-12 flex items-center gap-4 reveal-up ${heroRevealed ? 'revealed' : ''}`}
+              className={`mt-14 flex items-center gap-4 reveal-up ${heroRevealed ? 'revealed' : ''}`}
               style={{ transitionDelay: '400ms' }}
             >
-              <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                <Phone className="w-5 h-5 text-primary" />
+              <div className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center text-white/70">
+                <Phone className="w-5 h-5" />
               </div>
               <div>
                 <p className="font-mono text-xs text-white/50 uppercase tracking-wider">
                   Call Us Anytime
                 </p>
-                <a href="tel:+1234567890" className="text-white text-lg font-medium hover:text-primary transition-colors">
+                <a href="tel:+1234567890" className="text-white font-body font-light hover:text-primary transition-colors">
                   +1 (234) 567-890
                 </a>
               </div>
@@ -364,9 +362,9 @@ export default function Home() {
         
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-          <div className="flex flex-col items-center gap-2 text-white/50">
+          <div className="flex flex-col items-center gap-2 text-white/40">
             <span className="font-mono text-xs uppercase tracking-widest">Scroll</span>
-            <div className="w-px h-12 bg-gradient-to-b from-white/50 to-transparent" />
+            <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
           </div>
         </div>
       </section>

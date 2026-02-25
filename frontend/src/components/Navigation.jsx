@@ -42,73 +42,81 @@ export const Navigation = memo(function Navigation() {
     <header
       data-testid="navigation-header"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-white/95 backdrop-blur-sm shadow-sm border-b border-border/50" 
+        isScrolled
+          ? "bg-white/98 backdrop-blur-md shadow-sm border-b border-border/50"
           : "bg-transparent"
-      }`}
+      } ${!isScrolled ? "text-white" : ""}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link 
-            to="/" 
+          {/* Logo – stacked wordmark when transparent, compact when scrolled */}
+          <Link
+            to="/"
             className="flex items-center gap-3 group"
             data-testid="logo-link"
           >
-            <div className="w-11 h-11 bg-secondary flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
-              <span className="font-heading text-lg font-bold text-white">
+            <div className={`w-10 h-10 flex items-center justify-center rounded-sm transition-colors duration-300 ${
+              isScrolled ? "bg-primary" : "bg-white/10 border border-white/20"
+            }`}>
+              <span className={`font-hero text-xl tracking-tight ${isScrolled ? "text-white" : "text-white"}`}>
                 BC
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="font-heading text-xl font-bold tracking-wide text-secondary leading-none">
+              <span className={`font-hero text-xl tracking-widest leading-none ${
+                isScrolled ? "text-foreground" : "text-white"
+              }`}>
                 BUILDCRAFT
               </span>
-              <span className="font-mono text-2xs uppercase tracking-[0.15em] text-muted-foreground">
-                Construction Co.
+              <span className={`font-mono text-2xs uppercase tracking-[0.2em] ${
+                isScrolled ? "text-muted-foreground" : "text-white/60"
+              }`}>
+                Construction
               </span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1" data-testid="desktop-nav">
+          {/* Desktop Navigation – thin, spaced (Architona style) */}
+          <nav className="hidden lg:flex items-center gap-6" data-testid="desktop-nav">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className={`relative px-4 py-2 font-mono text-sm uppercase tracking-wider transition-colors duration-200 ${
+                className={`relative py-2 font-body text-sm font-light tracking-wide transition-colors duration-200 ${
                   location.pathname === link.href
-                    ? "text-primary"
-                    : "text-secondary/80 hover:text-secondary"
+                    ? isScrolled ? "text-primary" : "text-primary"
+                    : isScrolled ? "text-foreground/80 hover:text-foreground" : "text-white/85 hover:text-white"
                 }`}
                 data-testid={`nav-link-${link.label.toLowerCase()}`}
               >
-                {link.label}
+                {link.label.toUpperCase()}
                 {location.pathname === link.href && (
-                  <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary" />
+                  <span className="absolute bottom-0 left-0 right-0 h-px bg-primary" />
                 )}
               </Link>
             ))}
           </nav>
 
-          {/* CTA Section - Desktop */}
-          <div className="hidden lg:flex items-center gap-5">
+          {/* CTA – pill Contact button (Architona style) */}
+          <div className="hidden lg:flex items-center gap-6">
             <a
               href="tel:+1234567890"
-              className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+              className={`flex items-center gap-2 transition-colors ${
+                isScrolled ? "text-foreground/70 hover:text-primary" : "text-white/80 hover:text-white"
+              }`}
               data-testid="phone-link"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-mono text-sm">(234) 567-890</span>
+              <span className="font-body text-sm font-light">(234) 567-890</span>
             </a>
-            <Link to="/contact">
-              <Button 
-                className="bg-primary hover:bg-primary/90 text-white font-heading uppercase tracking-wider h-11 px-6"
-                data-testid="get-quote-btn"
-              >
-                Get Quote
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+            <Link to="/contact" data-testid="get-quote-btn">
+              <span className={`inline-flex items-center justify-center rounded-full border-2 font-body text-sm font-medium tracking-wide transition-all duration-300 ${
+                isScrolled
+                  ? "h-10 px-6 border-primary bg-primary text-white hover:bg-primary/90"
+                  : "h-10 px-6 border-white/40 bg-white/10 text-white hover:bg-white hover:text-secondary hover:border-white"
+              }`}>
+                CONTACT
+              </span>
             </Link>
           </div>
 
